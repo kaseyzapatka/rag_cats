@@ -1,0 +1,6 @@
+# files to ignore
+*.pyc
+*.pyo
+__pycache__/
+*.DS_Store 
+*data/
