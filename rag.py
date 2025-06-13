@@ -1,7 +1,7 @@
 # ==========================================================================
-# demo.py
+# rag.py
 
-# Summary: This script builds a RAG from scratch, following this tutorial 
+# SUMMARY: This script builds a RAG from scratch, following this tutorial 
 # from HuggingFace: https://huggingface.co/blog/ngxson/make-your-own-rag
 # ==========================================================================
 
@@ -84,8 +84,9 @@ for chunk, similarity in retrieved_knowledge:
 #{'\n'.join([f' - {chunk}' for chunk, similarity in retrieved_knowledge])}
 #'''
 
+# use this instructional prompt instead
 instruction_prompt = '\n'.join([f" - {chunk}".replace('{', '{{').replace('}', '}}') for chunk, similarity in retrieved_knowledge])
-instruction_prompt
+
 
 
 stream = ollama.chat(
